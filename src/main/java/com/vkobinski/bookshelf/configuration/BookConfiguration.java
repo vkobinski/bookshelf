@@ -14,14 +14,14 @@ import java.util.Collections;
 @Configuration
 public class BookConfiguration {
 
-    @Bean
-    CommandLineRunner commandLineRunner(BookRepository bookRepository, AuthorRepository authorRepository) {
-        return args -> {
-            Author author = new Author("Victor Kobinski", LocalDateTime.now(), "Brazil", Collections.emptyList());
-            authorRepository.save(author);
-            Book book = new Book("Teste", authorRepository.findById(1l).get(), "./", false);
-            bookRepository.save(book);
-        };
-    }
+//    @Bean
+//    CommandLineRunner commandLineRunner(BookRepository bookRepository, AuthorRepository authorRepository) {
+//        return args -> {
+//            Author author = new Author("Victor Kobinski", LocalDateTime.now(), "Brazil", Collections.emptyList());
+//            authorRepository.save(author);
+//            Book book = new Book("Teste", authorRepository.findById(1l).get(), "./", false);
+//            bookRepository.save(book);
+//        };
+//    }
 
 }
